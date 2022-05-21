@@ -16,4 +16,15 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.userInfo__report {
+  margin: 0;
+  font-weight: 300;
+  font-size: 0.8em;
+}
+
+.userInfo__username {
+  margin-top: 0.4rem;
+  font-weight: 400;
+}
+</style>
