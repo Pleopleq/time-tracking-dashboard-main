@@ -27,6 +27,7 @@ export default {
 .main__container {
   display: grid;
   grid-column: 320px;
+  margin-top: 3.5rem;
   justify-content: center;
   align-content: center;
 }
