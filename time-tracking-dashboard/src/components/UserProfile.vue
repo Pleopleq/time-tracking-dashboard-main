@@ -8,4 +8,16 @@
 export default {};
 </script>
 
-<style></style>
+<style>
+.userProfile__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3.5rem;
+  width: 280px;
+  height: 120px;
+  max-width: 320px;
+  background-color: var(--blue);
+  border-radius: 12px;
+}
+</style>

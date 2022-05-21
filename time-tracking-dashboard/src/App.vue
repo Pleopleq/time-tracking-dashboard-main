@@ -23,4 +23,11 @@ export default {
 
 <style>
 @import "./assets/styles/styles.css";
+
+.main__container {
+  display: grid;
+  grid-column: 320px;
+  justify-content: center;
+  align-content: center;
+}
 </style>

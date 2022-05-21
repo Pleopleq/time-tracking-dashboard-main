@@ -12,4 +12,16 @@
 export default {};
 </script>
 
-<style></style>
+<style>
+img {
+  width: 100%;
+  min-width: 32px;
+  max-width: 62px;
+  border: 2px solid white;
+  border-radius: 100%;
+}
+
+.userAvatar__container {
+  margin-right: 1rem;
+}
+</style>
