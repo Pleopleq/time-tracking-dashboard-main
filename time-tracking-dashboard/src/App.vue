@@ -8,7 +8,9 @@
         <user-info></user-info>
       </template>
     </user-profile>
-    <div class="trackers__container"></div>
+    <div class="trackers__container">
+      <tracker-card></tracker-card>
+    </div>
   </main>
 </template>
 
@@ -16,8 +18,9 @@
 import UserAvatar from "./components/UserAvatar.vue";
 import UserInfo from "./components/UserInfo.vue";
 import UserProfile from "./components/UserProfile.vue";
+import TrackerCard from "./components/TrackerCard.vue";
 export default {
-  components: { UserProfile, UserAvatar, UserInfo },
+  components: { UserProfile, UserAvatar, UserInfo, TrackerCard },
   name: "App",
 };
 </script>
