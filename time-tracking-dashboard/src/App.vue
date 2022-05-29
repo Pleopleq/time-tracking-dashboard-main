@@ -8,6 +8,7 @@
         <user-info></user-info>
       </template>
     </user-profile>
+    <div class="trackers__container"></div>
   </main>
 </template>
 
@@ -30,5 +31,8 @@ export default {
   margin-top: 3.5rem;
   justify-content: center;
   align-content: center;
+}
+.trackers__container {
+  margin-top: 1.5rem;
 }
 </style>
