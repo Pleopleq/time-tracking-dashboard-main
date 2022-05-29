@@ -9,7 +9,11 @@
       </template>
     </user-profile>
     <div class="trackers__container">
-      <tracker-card></tracker-card>
+      <tracker-card
+        v-for="area in trackers"
+        :key="area.title"
+        :colorBar="area.title.toLowerCase()"
+      ></tracker-card>
     </div>
   </main>
 </template>
@@ -19,8 +23,15 @@ import UserAvatar from "./components/UserAvatar.vue";
 import UserInfo from "./components/UserInfo.vue";
 import UserProfile from "./components/UserProfile.vue";
 import TrackerCard from "./components/TrackerCard.vue";
+import data from "../public/data.json";
+
 export default {
   components: { UserProfile, UserAvatar, UserInfo, TrackerCard },
+  data() {
+    return {
+      trackers: data,
+    };
+  },
   name: "App",
 };
 </script>

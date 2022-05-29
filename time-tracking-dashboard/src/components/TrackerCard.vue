@@ -1,5 +1,5 @@
 <template>
-  <div class="tracker__container" :class="colorBar">
+  <div class="tracker__container" :class="getColorBar(colorBar)">
     <div class="tracker__data">
       <slot name="trackerData"></slot>
     </div>
@@ -11,6 +11,26 @@ export default {
   props: {
     colorBar: "",
   },
+  methods: {
+    getColorBar(trackerName) {
+      switch (trackerName) {
+        case "work":
+          return "colorBar__work";
+        case "play":
+          return "colorBar__play";
+        case "study":
+          return "colorBar__study";
+        case "exercise":
+          return "colorBar__exercise";
+        case "social":
+          return "colorBar__social";
+        case "self care":
+          return "colorBar__selfCare";
+        default:
+          return "";
+      }
+    },
+  },
 };
 </script>
 
@@ -20,6 +40,7 @@ export default {
   align-items: flex-end;
   border-radius: 15px;
   height: 130px;
+  margin-bottom: 2rem;
 }
 .tracker__data {
   display: flex;
@@ -33,7 +54,7 @@ export default {
 }
 
 .colorBar__work {
-  background-color: var(--soft-orange);
+  background-color: var(--light-red);
 }
 .colorBar__play {
   background-color: var(--soft-blue);
