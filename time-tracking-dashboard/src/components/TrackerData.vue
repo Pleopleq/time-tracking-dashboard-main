@@ -2,15 +2,13 @@
   <section class="trackerData">
     <div class="rightData__container">
       <h2 class="title">{{ title }}</h2>
-      <h1 class="currentHours">{{ timeframe.weekly.current }} hrs</h1>
+      <h1 class="currentHours">{{ timeframe.current }} hrs</h1>
     </div>
     <div class="leftData__container">
       <button class="moreDetails">
         <div>...</div>
       </button>
-      <p class="lastWeekHours">
-        Last Week - {{ timeframe.weekly.previous }}hrs
-      </p>
+      <p class="lastWeekHours">Last Week - {{ timeframe.previous }}hrs</p>
     </div>
   </section>
 </template>

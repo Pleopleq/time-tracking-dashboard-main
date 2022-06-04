@@ -1,6 +1,6 @@
 <template>
   <main class="main__container">
-    <user-profile>
+    <user-profile @option-active="handleTimeframes">
       <template v-slot:avatar>
         <user-avatar></user-avatar>
       </template>
@@ -17,7 +17,7 @@
         <template v-slot:trackerData>
           <tracker-data
             :title="area.title"
-            :timeframe="area.timeframes"
+            :timeframe="area.timeframes[timeframe]"
           ></tracker-data>
         </template>
       </tracker-card>
@@ -34,13 +34,19 @@ import TrackerData from "./components/TrackerData.vue";
 import data from "../public/data.json";
 
 export default {
+  name: "App",
   components: { UserProfile, UserAvatar, UserInfo, TrackerCard, TrackerData },
   data() {
     return {
       trackers: data,
+      timeframe: "weekly",
     };
   },
-  name: "App",
+  methods: {
+    handleTimeframes(timeframe) {
+      this.timeframe = timeframe;
+    },
+  },
 };
 </script>
 
