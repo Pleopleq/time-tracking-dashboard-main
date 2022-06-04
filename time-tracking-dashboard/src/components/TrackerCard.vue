@@ -45,10 +45,8 @@ export default {
   height: 130px;
   margin-bottom: 2rem;
 }
+
 .tracker__data {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 280px;
   height: 100px;
   max-width: 320px;
