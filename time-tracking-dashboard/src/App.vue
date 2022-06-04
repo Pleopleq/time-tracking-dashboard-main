@@ -13,7 +13,14 @@
         v-for="area in trackers"
         :key="area.title"
         :colorBar="area.title.toLowerCase()"
-      ></tracker-card>
+      >
+        <template v-slot:trackerData>
+          <tracker-data
+            :title="area.title"
+            :timeframe="area.timeframes"
+          ></tracker-data>
+        </template>
+      </tracker-card>
     </div>
   </main>
 </template>
@@ -23,10 +30,11 @@ import UserAvatar from "./components/UserAvatar.vue";
 import UserInfo from "./components/UserInfo.vue";
 import UserProfile from "./components/UserProfile.vue";
 import TrackerCard from "./components/TrackerCard.vue";
+import TrackerData from "./components/TrackerData.vue";
 import data from "../public/data.json";
 
 export default {
-  components: { UserProfile, UserAvatar, UserInfo, TrackerCard },
+  components: { UserProfile, UserAvatar, UserInfo, TrackerCard, TrackerData },
   data() {
     return {
       trackers: data,

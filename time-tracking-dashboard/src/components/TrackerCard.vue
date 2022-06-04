@@ -9,7 +9,10 @@
 <script>
 export default {
   props: {
-    colorBar: "",
+    colorBar: {
+      type: String,
+      default: "",
+    },
   },
   methods: {
     getColorBar(trackerName) {
