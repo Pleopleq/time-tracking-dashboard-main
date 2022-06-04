@@ -6,7 +6,7 @@
     </div>
     <div class="leftData__container">
       <button class="moreDetails">
-        <div>...</div>
+        <img src="../assets/images/icon-ellipsis.svg" alt="" />
       </button>
       <p class="lastWeekHours">Last Week - {{ timeframe.previous }}hrs</p>
     </div>
@@ -48,7 +48,6 @@ export default {
   background-color: transparent;
   color: white;
   border: none;
-  font-size: 1.7em;
   margin-bottom: 12px;
 }
 
